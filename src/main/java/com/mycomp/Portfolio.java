@@ -23,7 +23,13 @@ public class Portfolio {
     public void setStockService(StockService stockService) {
         this.stockService = stockService;
     }
-double totalMarketValue;
+
+    /***
+     * getPrice(Stock) method is from interface StockService which has not been implemented
+     * by other class so we will mock (Create unreal object as real) from the test class i.e
+     * TestmockExample.
+     *
+     * */
     public double getMarketValue() {
         double totalMarketValue=0.00;
         for (Stock stk : stock) {
